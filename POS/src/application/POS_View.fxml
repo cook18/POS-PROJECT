@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
+<VBox spacing="10" prefWidth="1400" prefHeight="600" fx:controller="application.POS_Controller" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Font fx:id="FONT" size="15" />
+    </fx:define>
+    
+    <StackPane alignment="CENTER">
+        <Rectangle fill="TRANSPARENT" stroke="BLACK" width="257" height="30" />
+        <Text fx:id="outputPrice" />
+    </StackPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="7" prefWidth="80" font="$FONT" onAction="#numberPad" />
+        <Button text="8" prefWidth="80" font="$FONT" onAction="#numberPad" />
+        <Button text="9" prefWidth="80" font="$FONT" onAction="#numberPad" />
+    </HBox>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="4" prefWidth="80" font="$FONT" onAction="#numberPad" />
+        <Button text="5" prefWidth="80" font="$FONT" onAction="#numberPad" />
+        <Button text="6" prefWidth="80" font="$FONT" onAction="#numberPad" />
+    </HBox>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="1" prefWidth="80" font="$FONT" onAction="#numberPad" />
+        <Button text="2" prefWidth="80" font="$FONT" onAction="#numberPad" />
+        <Button text="3" prefWidth="80" font="$FONT" onAction="#numberPad" />
+    </HBox>
+    
+    <HBox spacing="10" alignment="CENTER">
+    	<Button text="Clear" prefWidth="80" font="$FONT" onAction="#clearButton" />
+        <Button text="0" prefWidth="80" font="$FONT" onAction="#numberPad" />
+        <Button text="Confirm" prefWidth="80" font="$FONT" onAction="#confirmButton" />
+    </HBox> 
+    
+</VBox>
 
