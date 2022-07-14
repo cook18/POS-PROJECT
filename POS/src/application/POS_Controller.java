@@ -6,7 +6,7 @@ import java.util.Locale;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.text.Text;
+import javafx.scene.control.TextField;
 
 public class POS_Controller {
 		
@@ -14,7 +14,7 @@ public class POS_Controller {
 	private boolean start = true;
 	
 	@FXML
-	private Text outputPrice;
+	private TextField outputPrice;
 	@FXML
 	private void clearButton(ActionEvent event) {
 		if (start) {

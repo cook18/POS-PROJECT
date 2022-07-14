@@ -1,50 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.beans.property.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.paint.Color?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox spacing="10" prefWidth="1400" prefHeight="600" fx:controller="application.POS_Controller" xmlns:fx="http://javafx.com/fxml">
-    <fx:define>
-        <Font fx:id="FONT" size="15" />
-    </fx:define>
-    
-    <StackPane alignment="CENTER">
-        <Rectangle fill="TRANSPARENT" stroke="BLACK" width="257" height="30" />
-        <Text fx:id="outputPrice" />
-    </StackPane>
-
-    <HBox spacing="10" alignment="CENTER">
-        <Button text="7" prefWidth="80" font="$FONT" onAction="#numberPad" />
-        <Button text="8" prefWidth="80" font="$FONT" onAction="#numberPad" />
-        <Button text="9" prefWidth="80" font="$FONT" onAction="#numberPad" />
-    </HBox>
-    
-    <HBox spacing="10" alignment="CENTER">
-        <Button text="4" prefWidth="80" font="$FONT" onAction="#numberPad" />
-        <Button text="5" prefWidth="80" font="$FONT" onAction="#numberPad" />
-        <Button text="6" prefWidth="80" font="$FONT" onAction="#numberPad" />
-    </HBox>
-    
-    <HBox spacing="10" alignment="CENTER">
-        <Button text="1" prefWidth="80" font="$FONT" onAction="#numberPad" />
-        <Button text="2" prefWidth="80" font="$FONT" onAction="#numberPad" />
-        <Button text="3" prefWidth="80" font="$FONT" onAction="#numberPad" />
-    </HBox>
-    
-    <HBox spacing="10" alignment="CENTER">
-    	<Button text="Clear" prefWidth="80" font="$FONT" onAction="#clearButton" />
-        <Button text="0" prefWidth="80" font="$FONT" onAction="#numberPad" />
-        <Button text="Confirm" prefWidth="80" font="$FONT" onAction="#confirmButton" />
-    </HBox> 
-    
-</VBox>
-
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="914.0" style="-fx-background-color: white;" fx:controller="application.POS_Controller" xmlns:fx="http://javafx.com/fxml">
+   <children>
+      <VBox layoutX="273.0" layoutY="380.0" prefHeight="225.0" prefWidth="208.0" style="-fx-background-color: linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%); -fx-background-radius: 5;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="203.0">
+               <children>
+                  <TextField fx:id="outputPrice" alignment="CENTER_RIGHT">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox accessibleRole="IMAGE_VIEW" alignment="CENTER" prefHeight="57.0" prefWidth="203.0">
+               <children>
+                  <Button cache="true" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="7" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="8" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="9" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="203.0">
+               <children>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="4" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="5" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="6" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox accessibleRole="BUTTON" alignment="CENTER" minWidth="-Infinity" prefHeight="57.0" prefWidth="203.0">
+               <children>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="1" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="2" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="3" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="203.0">
+               <children>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="AC" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#numberPad" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button cache="true" layoutX="50.0" mnemonicParsing="false" onAction="#confirmButton" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: linear-gradient(#7ebcea, #2f4b8f); -fx-background-radius: 5;" text="Enter" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane layoutX="14.0" layoutY="380.0" prefHeight="225.0" prefWidth="252.0" style="-fx-background-radius: 7; -fx-background-color: linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%);">
+         <children>
+            <TextField alignment="CENTER_RIGHT" layoutX="94.0" layoutY="157.0" prefHeight="51.0" prefWidth="150.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <VBox alignment="CENTER" layoutX="126.0" prefHeight="148.0" prefWidth="120.0">
+               <children>
+                  <TextField alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="148.0" prefWidth="120.0">
+               <children>
+                  <Label prefWidth="100.0" text="Total Quantity" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefWidth="100.0" text="Discount" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefWidth="100.0" text="Point" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefWidth="100.0" text="Total Amount" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="157.0" prefHeight="51.0" prefWidth="82.0" text="Changes" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>
