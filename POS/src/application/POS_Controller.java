@@ -13,8 +13,17 @@ public class POS_Controller {
 	NumberFormat numberFormat = NumberFormat.getInstance(Locale.CANADA);
 	private boolean start = true;
 	
+
 	@FXML
 	private TextField outputPrice;
+	@FXML
+	private TextField totalQuantity;
+	@FXML
+	private TextField discount;
+	@FXML
+	private TextField totalAmount;
+	@FXML
+	private TextField changes;
 	@FXML
 	private void clearButton(ActionEvent event) {
 		if (start) {

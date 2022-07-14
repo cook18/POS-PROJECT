@@ -183,29 +183,29 @@
       </VBox>
       <Pane layoutX="14.0" layoutY="380.0" prefHeight="225.0" prefWidth="252.0" style="-fx-background-radius: 7; -fx-background-color: linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%);">
          <children>
-            <TextField alignment="CENTER_RIGHT" layoutX="94.0" layoutY="157.0" prefHeight="51.0" prefWidth="150.0">
+            <TextField id="changes" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="157.0" prefHeight="51.0" prefWidth="150.0">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
             <VBox alignment="CENTER" layoutX="126.0" prefHeight="148.0" prefWidth="120.0">
                <children>
-                  <TextField alignment="CENTER_RIGHT">
+                  <TextField id="totalQuantity" alignment="CENTER_RIGHT">
                      <VBox.margin>
                         <Insets top="7.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField alignment="CENTER_RIGHT">
+                  <TextField id="discount" alignment="CENTER_RIGHT">
                      <VBox.margin>
                         <Insets top="7.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField alignment="CENTER_RIGHT">
+                  <TextField id="ponint" alignment="CENTER_RIGHT">
                      <VBox.margin>
                         <Insets top="7.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField alignment="CENTER_RIGHT">
+                  <TextField id="totalAmount" alignment="CENTER_RIGHT">
                      <VBox.margin>
                         <Insets top="7.0" />
                      </VBox.margin>
