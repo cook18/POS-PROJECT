@@ -12,6 +12,7 @@ public class POS_Controller {
 		
 	NumberFormat numberFormat = NumberFormat.getInstance(Locale.CANADA);
 	private boolean start = true;
+	private int textFieldNumberValue = 0;
 	
 
 	@FXML
@@ -29,6 +30,7 @@ public class POS_Controller {
 		if (start) {
 			outputPrice.setText("0");
 		}
+		textFieldNumberValue = 0;
 		outputPrice.setText("");
 	}
 	@FXML
@@ -40,7 +42,8 @@ public class POS_Controller {
 			outputPrice.setText("");
 			start = false;
 		}
-		String value = ((Button)event.getSource()).getText();
-		outputPrice.setText(outputPrice.getText() + value);
+		textFieldNumberValue = Integer.parseInt("" + textFieldNumberValue + ((Button)event.getSource()).getText());
+		String formattedValue ="$" + numberFormat.format(textFieldNumberValue);
+		outputPrice.setText(formattedValue);
 	}
 }
